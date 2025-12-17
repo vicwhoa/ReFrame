@@ -50,6 +50,7 @@
       color:var(--muted);
     }
     .hero-lines strong{ color:var(--text); font-weight:650; }
+
     .btn{
       display:inline-flex;
       align-items:center;
@@ -61,10 +62,23 @@
       background:#fff;
       transition:transform .08s ease, background .2s ease;
       cursor:pointer;
+      line-height:1;
     }
     .btn:hover{ background:#fafafa; }
     .btn:active{ transform:translateY(1px); }
     .btn svg{ width:16px; height:16px; }
+
+    /* Make <button class="btn"> render exactly like <a class="btn"> */
+    button.btn{
+      appearance:none;
+      -webkit-appearance:none;
+      background:#fff;
+      border:1px solid var(--line);
+      font-family:inherit;
+      font-size:inherit;
+      line-height:1;
+      padding:10px 14px; /* match .btn padding */
+    }
 
     main{ padding-top:24px; }
     section{ padding:18px 0; }
@@ -100,8 +114,51 @@
       font-weight:650;
     }
 
-    form input, form textarea{
-      font:inherit;
+    form input, form textarea{ font:inherit; }
+
+    /* --- Waitlist form styling --- */
+    .form{
+      margin-top:14px;
+      max-width:440px;
+    }
+    .form .field{
+      display:grid;
+      gap:6px;
+      margin-bottom:12px;
+    }
+    .form .label{
+      font-size:14px;
+      color:var(--muted);
+    }
+    .input, .textarea{
+      width:100%;
+      padding:12px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      color:var(--text);
+      outline:none;
+      transition:border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .textarea{
+      resize:vertical;
+      min-height:92px;
+    }
+    .input::placeholder, .textarea::placeholder{ color:#9a9a9a; }
+    .input:focus, .textarea:focus{
+      border-color:#d6d6d6;
+      box-shadow:0 0 0 4px rgba(0,0,0,0.04);
+    }
+    .submitRow{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-top:6px;
+      flex-wrap:wrap;
+    }
+    .fineprint{
+      font-size:12px;
+      color:var(--muted);
     }
 
     footer{
@@ -203,44 +260,41 @@
 
       <!-- WAITLIST FORM -->
       <section id="waitlist">
-  <h2>Early access waitlist</h2>
-  <p class="muted">
-    We’re starting small with invite-only sessions. Leave your email and we’ll reach out.
-  </p>
+        <h2>Early access waitlist</h2>
+        <p class="muted">
+          We’re starting small with invite-only sessions. Leave your email and we’ll reach out.
+        </p>
 
-  <form class="form" action="https://formspree.io/f/xaqwweqz" method="POST">
-    <div class="field">
-      <div class="label">Email</div>
-      <input class="input" type="email" name="email" required placeholder="you@example.com" />
-    </div>
+        <form class="form" action="https://formspree.io/f/xaqwweqz" method="POST">
+          <div class="field">
+            <div class="label">Email</div>
+            <input class="input" type="email" name="email" required placeholder="you@example.com" />
+          </div>
 
-    <div class="field">
-      <div class="label">What made you curious? (optional)</div>
-      <textarea class="textarea" name="message" rows="3" placeholder="I like the idea of conscious attention + rewards."></textarea>
-    </div>
+          <div class="field">
+            <div class="label">What made you curious? (optional)</div>
+            <textarea class="textarea" name="message" rows="3" placeholder="I like the idea of conscious attention + rewards."></textarea>
+          </div>
 
-    <!-- Spam protection -->
-    <input type="text" name="_gotcha" style="display:none">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="New Frame waitlist signup">
 
-    <!-- Email subject -->
-    <input type="hidden" name="_subject" value="New Frame waitlist signup">
-
-    <div class="submitRow">
-      <button type="submit" class="btn" aria-label="Join the waitlist">
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M7 13l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-  Join the waitlist
-</button>
-      <span class="fineprint">No spam. Just early access.</span>
-    </div>
-  </form>
-</section>
+          <div class="submitRow">
+            <button type="submit" class="btn" aria-label="Join the waitlist">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 13l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Join the waitlist
+            </button>
+            <span class="fineprint">No spam. Just early access.</span>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <footer>
       <div class="social">
-        <!-- Replace # with your real links -->
         <a class="pill" href="#" target="_blank" rel="noopener">X</a>
         <a class="pill" href="#" target="_blank" rel="noopener">Instagram</a>
         <a class="pill" href="#" target="_blank" rel="noopener">Facebook</a>
