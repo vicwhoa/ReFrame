@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frame — Learn More</title>
+  <meta name="description" content="Learn more about Frame and join the early access waitlist." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#565656;
+      --line:#eaeaea;
+      --card:#ffffff;
+      --max: 780px;
+      --radius: 16px;
+    }
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:56px 20px 44px;
+    }
+    header{
+      padding-bottom:18px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-0.02em;
+    }
+    .muted{ color:var(--muted); }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      transition:transform .08s ease, background .2s ease;
+      cursor:pointer;
+      line-height:1;
+    }
+    .btn:hover{ background:#fafafa; }
+    .btn:active{ transform:translateY(1px); }
+    .btn svg{ width:16px; height:16px; }
+
+    button.btn{
+      appearance:none;
+      -webkit-appearance:none;
+      background:#fff;
+      border:1px solid var(--line);
+      font-family:inherit;
+      font-size:inherit;
+      line-height:1;
+      padding:10px 14px;
+    }
+
+    main{ padding-top:24px; }
+    section{ padding:18px 0; }
+    h2{
+      margin:0 0 10px;
+      font-size:22px;
+      letter-spacing:-0.01em;
+    }
+    p{ margin:0 0 10px; }
+
+    ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    li{ margin:8px 0; }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      padding:14px 14px 10px;
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--muted);
+      font-weight:650;
+    }
+
+    /* Form styling */
+    .form{ margin-top:14px; max-width:440px; }
+    .form .field{ display:grid; gap:6px; margin-bottom:12px; }
+    .form .label{ font-size:14px; color:var(--muted); }
+    .input, .textarea{
+      width:100%;
+      padding:12px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      color:var(--text);
+      outline:none;
+      transition:border-color .15s ease, box-shadow .15s ease, background .15s ease;
+      font:inherit;
+    }
+    .textarea{ resize:vertical; min-height:92px; }
+    .input::placeholder, .textarea::placeholder{ color:#9a9a9a; }
+    .input:focus, .textarea:focus{
+      border-color:#d6d6d6;
+      box-shadow:0 0 0 4px rgba(0,0,0,0.04);
+    }
+    .submitRow{ display:flex; align-items:center; gap:12px; margin-top:6px; flex-wrap:wrap; }
+    .fineprint{ font-size:12px; color:var(--muted); }
+
+    footer{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .social{ display:flex; flex-wrap:wrap; gap:10px; }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+    }
+    .pill:hover{ background:#fafafa; }
+
+    @media (min-width: 760px){
+      .grid{ grid-template-columns:1fr 1fr; }
+      h1{ font-size:30px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Frame <span class="muted">— Learn More</span></h1>
+      <a class="btn" href="index.html" aria-label="Back to home">← Back</a>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is this?</h2>
+        <p>
+          We’re building an opt-in platform where you intentionally watch curated brand videos and receive real rewards in return.
+        </p>
+        <p class="muted">
+          No infinite scroll.<br/>
+          No hidden algorithms.<br/>
+          Just conscious attention.
+        </p>
+      </section>
+
+      <section>
+        <h2>How it works?</h2>
+        <ul>
+          <li>Join a short, 10-minute session</li>
+          <li>Watch 3–5 creative brand films</li>
+          <li>Receive perks like discounts, early access, or raffle entries</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why are we different?</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>For you:</h3>
+            <ul>
+              <li>You choose when to watch</li>
+              <li>You know how your time is monetized</li>
+              <li>You get something real in return</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>For brands:</h3>
+            <ul>
+              <li>Verified, opt-in attention</li>
+              <li>Higher recall and trust</li>
+              <li>A space for creativity — not noise</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="waitlist">
+        <h2>Early access waitlist</h2>
+        <p class="muted">
+          We’re starting small with invite-only sessions. Leave your email and we’ll reach out.
+        </p>
+
+        <form class="form" action="https://formspree.io/f/xaqwweqz" method="POST">
+          <div class="field">
+            <div class="label">Email</div>
+            <input class="input" type="email" name="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <div class="label">What made you curious? (optional)</div>
+            <textarea class="textarea" name="message" rows="3" placeholder="I like the idea of conscious attention + rewards."></textarea>
+          </div>
+
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="New Frame waitlist signup">
+
+          <div class="submitRow">
+            <button type="submit" class="btn" aria-label="Join the waitlist">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 13l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Join the waitlist
+            </button>
+            <span class="fineprint">No spam. Just early access.</span>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social">
+        <a class="pill" href="#" target="_blank" rel="noopener">X</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">TikTok</a>
+        <a class="pill" href="mailto:you@example.com">Email</a>
+      </div>
+
+      <small class="muted">© <span id="y"></span> Frame</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
